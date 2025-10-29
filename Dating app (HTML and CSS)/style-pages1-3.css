@@ -1,0 +1,126 @@
+    body {
+      margin: 0;
+
+      font-family: Lato, "Inter", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fff;
+    }
+
+    .display-container {
+      width: 375px;
+      height: 812px;
+      border: 2px solid #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    .img-container {
+      width: 300px;
+      margin-top: 60px;
+    }
+
+    .img-container img {
+      width: 370px;
+      height: auto;
+      object-fit: contain;
+      margin-top: 100px;
+      margin: auto;
+      margin-left: -35px;
+    }
+
+    .pink-text-container {
+      background-color: #ff5f5f;
+      color: #fff;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      border-radius: 5px;
+      padding: 13px 15px;
+      font-size: 12px;
+      letter-spacing: 5%;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 70px;
+
+    }
+
+    .description {
+      width: 244px;
+      text-align: center;
+      line-height: 14px;
+      font-size: 10px;
+      font-weight: 400;
+      color: #5A5A64;
+      max-width: 280px;
+      margin-top: 47px;
+    }
+
+    .bottom-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    .skip-btn,
+    .next-btn {
+      border: none;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: semi-bold;
+      padding: 12px 26px;
+      cursor: pointer;
+      height: 30px;
+      width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .skip-btn {
+      background-color: #F5F5FF;
+      color: #5A5A64;
+    }
+
+    .next-btn {
+      background-color: #ff5f5f;
+      color: #fff;
+    }
+
+    .dots {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 10%;
+      background-color: #F5F5FF;
+    }
+
+    .dot.active {
+      background-color: #ff5f5f;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .vertical-img {
+      height: 247px !important;
+      width: auto;
+    }
