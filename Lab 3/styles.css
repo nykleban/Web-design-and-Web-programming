@@ -1,0 +1,66 @@
+body {
+    background-color: #deffdb;
+    color: #09005e;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #307900;
+}
+
+hr {
+    border: 1px solid #000000;
+}
+
+a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4d004d;
+}
+
+a:hover {
+    color: #415dfc;
+    text-decoration: underline;
+}
+
+img { /* Стиль до зображення мій власний, його не має у завданні */
+    display: block;
+    margin: 20px auto;
+}
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+th:nth-child(1) {
+    background-color: #00ffc8;
+    color: #000000;
+}
+
+th:nth-child(2) {
+    background-color: #f01153;
+    color: #ffffff;
+}
+
+td:nth-child(1) {
+    background-color: #868686;
+    color: #ffee00;
+}
+
+td:nth-child(2) {
+    background-color: #7bff00;
+    color: #004d26;
+}
