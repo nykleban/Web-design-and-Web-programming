@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN (Tailwind)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Great+Vibes&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: ['Lato', 'Inter', 'Arial', 'sans-serif'],
+              luckiest: ['Luckiest Guy', 'cursive']
+            },
+            colors: {
+              brand: '#ff5f5f',
+              ink: '#5A5A64',
+              faint: '#F5F5FF'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html,body { height: 100%; }
+      body { font-family: Lato, Inter, Arial, sans-serif; }
+    </style>
+  </head>
+
+  <body class="m-0 min-h-full flex items-center justify-center text-white">
+    <div class="flex flex-col items-center justify-start text-center w-[375px] h-[812px] border border-black bg-brand box-border">
+      <div class="my-[12.6%] mt-28">
+        <div class="w-[100px] h-[100px] mx-auto flex items-center justify-center mt-5">
+          <img src="images/pepicons-pencil_heart-filled-circle-filled.svg" alt="Pulsing Heart" class="w-[100px] h-[100px]" style="animation: pulse 1.2s ease-in-out infinite; transform-origin: center;">
+        </div>
+        <div class="font-luckiest text-[50px] tracking-[3px] mt-2 mb-14">FATED</div>
+      </div>
+
+      <div class="w-[280px]">
+        <div class="flex justify-center gap-3 mb-5">
+          <button class="w-[130px] h-[30px] text-[12px] font-black tracking-wider rounded bg-white text-brand">LOGIN</button>
+          <a href="register-page.html" class="w-[130px] h-[30px] text-[12px] font-black tracking-wider rounded bg-white/10 hover:bg-white/20 flex items-center justify-center">REGISTER</a>
+        </div>
+
+                <input type="text" placeholder="user name" class="font-lato w-full w-[260px] mx-auto bg-white rounded mb-2.5 px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block" />
+        <input type="password" placeholder="password" class="font-lato w-full w-[260px] mx-auto bg-white rounded mb-2.5 px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block" />
+
+        <div class="mt-3 text-[10px] text-right">
+          <a href="#" class="text-white no-underline">FORGOT PASSWORD?</a>
+        </div>
+
+        <button class="mt-5 w-full h-[46px] bg-white text-brand font-bold text-[15px] rounded px-2.5 py-3 tracking-wider hover:bg-[#ffdbdb] transition">
+          LOGIN
+        </button>
+
+        <a href="register-page.html" class="no-underline">
+          <p class="mt-5 text-[10px] text-white">ALREADY HAVE AN ACCOUNT? <span class="font-black cursor-pointer">REGISTER</span></p>
+        </a>
+      </div>
+    </div>
+    <style>
+      @keyframes pulse {
+        0%,100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+      }
+    </style>
+  </body>
+
+</html>

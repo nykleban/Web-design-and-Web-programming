@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone 13 Mini - 1 (Tailwind)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Great+Vibes&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Luckiest+Guy&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              lato: ['Lato', 'Inter', 'Arial', 'sans-serif'],
+              luckiest: ['Luckiest Guy', 'cursive']
+            },
+            colors: {
+              brand: '#ff5f5f',
+              ink: '#5A5A64',
+              faint: '#F5F5FF'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html,body { height: 100%; }
+      body { font-family: Lato, Inter, Arial, sans-serif; }
+    </style>
+  </head>
+
+  <body class="m-0 min-h-full flex items-center justify-center bg-white">
+    <div class="w-[375px] h-[812px] border-2 border-black flex flex-col items-center justify-between p-6 box-border">
+      <div class="w-[300px] mt-16">
+        <img src="images/img1.jpg" alt="Illustration" class="w-[370px] object-contain mx-auto -ml-[5px] mt-24">
+      </div>
+
+      <div class="w-full flex flex-col items-center">
+        <div class="bg-brand text-white flex items-center justify-center rounded text-[12px] font-bold text-center mt-[70px] mx-auto px-4 py-3 tracking-[0.05em]" style="width: auto; min-width: 120px;">
+          MEET NEW PEOPLE
+        </div>
+        <p class="text-ink text-center leading-[14px] text-[10px] font-normal max-w-[280px] mt-[47px]">
+          Select the Text tool (T) and add a new text element. Change the font style to Regular, 
+          lower the size to 10 and the letter spacing to 0%, increase the line height to 1.4, and 
+          then add some paragraphs, as shown in the following image. Don’t forget to change the text 
+          color to #5A5A64.
+        </p>
+      </div>
+
+      <div class="w-full flex items-center justify-between mb-4">
+        <a href="register-page.html" class="h-[30px] w-[70px] rounded flex items-center justify-center text-[12px] bg-faint text-ink">SKIP</a>
+        <div class="flex items-center gap-5">
+          <div class="h-2.5 w-2.5 rounded-sm bg-brand"></div>
+          <a href="iphone13mini-2.html" class="block h-2.5 w-2.5 rounded-sm bg-faint"></a>
+          <a href="iphone13mini-3.html" class="block h-2.5 w-2.5 rounded-sm bg-faint"></a>
+        </div>
+        <a href="iphone13mini-2.html" class="h-[30px] w-[70px] rounded flex items-center justify-center text-[12px] bg-brand text-white">NEXT</a>
+      </div>
+    </div>
+  </body>
+
+</html>
