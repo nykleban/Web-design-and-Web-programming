@@ -22,6 +22,16 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue'), // Ледаче завантаження ContactView
     },
+    {
+      path: '/fated/onboarding',
+      name: 'FatedOnboarding',
+      component: () => import('../views/FatedOnboarding.vue'),
+    },
+    {
+      path: '/fated/auth',
+      name: 'FatedAuth',
+      component: () => import('../views/FatedAuth.vue'),
+    },
   ],
 })
 
