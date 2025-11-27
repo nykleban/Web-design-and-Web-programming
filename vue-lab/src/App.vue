@@ -9,8 +9,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/" class="hover:text-blue-600">Home</RouterLink>
         <RouterLink to="/about" class="hover:text-blue-600">About</RouterLink>
         <RouterLink to="/contact" class="hover:text-blue-600">Contact</RouterLink>
-        <RouterLink to="/fated/onboarding" class="hover:text-pink-600">Fated Onboarding</RouterLink>
-        <RouterLink to="/fated/auth" class="hover:text-pink-600">Fated Auth</RouterLink>
+        <RouterLink to="/fated/onboarding" class="hover:text-pink-600">Datting App first page</RouterLink>
+        <RouterLink to="/fated/auth" class="hover:text-pink-600">Datting App login/register</RouterLink>
       </nav>
     </div>
   </header>
