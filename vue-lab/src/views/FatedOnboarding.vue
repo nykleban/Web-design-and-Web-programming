@@ -54,7 +54,7 @@
           class="h-[30px] w-[70px] rounded flex items-center justify-center text-[12px] bg-brand text-white"
           @click="nextSlide"
         >
-          {{ currentIndex === slides.length - 1 ? 'LOGIN' : 'NEXT' }}
+          NEXT
         </button>
       </div>
     </div>
