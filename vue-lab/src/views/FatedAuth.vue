@@ -14,6 +14,7 @@
         </div>
         <div class="font-luckiest text-[50px] tracking-[3px] mt-2 mb-14">FATED</div>
       </div>
+
       <div class="w-[280px]">
         <div class="flex justify-center gap-3 mb-5">
           <button
@@ -28,15 +29,14 @@
           <button
             type="button"
             class="w-[130px] h-[30px] text-[12px] font-black tracking-wider rounded"
-            :class="
-              activeTab === 'register' ? 'bg-white text-brand' : 'bg-white/10 hover:bg-white/20'
-            "
+            :class="activeTab === 'register' ? 'bg-white text-brand' : 'bg-white/10 hover:bg-white/20'"
             @click="setTab('register')"
           >
             REGISTER
           </button>
         </div>
 
+        <!-- LOGIN FORM -->
         <form v-if="activeTab === 'login'" class="space-y-2.5" @submit.prevent="onLogin">
           <input
             v-model="loginForm.username"
@@ -44,12 +44,19 @@
             placeholder="user name"
             class="font-lato w-full bg-white rounded px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block text-brand focus:outline-none focus:bg-[#fff5f5] focus:shadow-[0_0_10px_rgba(255,95,95,0.3)]"
           />
+          <p v-if="errors.login.username" class="text-[10px] text-red-200 text-left">
+            {{ errors.login.username }}
+          </p>
+
           <input
             v-model="loginForm.password"
             type="password"
             placeholder="password"
             class="font-lato w-full bg-white rounded px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block text-brand focus:outline-none focus:bg-[#fff5f5] focus:shadow-[0_0_10px_rgba(255,95,95,0.3)]"
           />
+          <p v-if="errors.login.password" class="text-[10px] text-red-200 text-left">
+            {{ errors.login.password }}
+          </p>
 
           <div class="mt-3 text-[10px] text-right">
             <a href="#" class="text-white no-underline">FORGOT PASSWORD?</a>
@@ -68,6 +75,7 @@
           </p>
         </form>
 
+        <!-- REGISTER FORM -->
         <form v-else class="space-y-2.5" @submit.prevent="onRegister">
           <input
             v-model="registerForm.username"
@@ -75,18 +83,29 @@
             placeholder="user name"
             class="font-lato w-full bg-white rounded px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block text-brand focus:outline-none focus:bg-[#fff5f5] focus:shadow-[0_0_10px_rgba(255,95,95,0.3)]"
           />
+          <p v-if="errors.register.username" class="text-[10px] text-red-200 text-left">
+            {{ errors.register.username }}
+          </p>
+
           <input
             v-model="registerForm.password"
             type="password"
             placeholder="password"
             class="font-lato w-full bg-white rounded px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block text-brand focus:outline-none focus:bg-[#fff5f5] focus:shadow-[0_0_10px_rgba(255,95,95,0.3)]"
           />
+          <p v-if="errors.register.password" class="text-[10px] text-red-200 text-left">
+            {{ errors.register.password }}
+          </p>
+
           <input
             v-model="registerForm.email"
             type="email"
             placeholder="email"
             class="font-lato w-full bg-white rounded px-2.5 py-3 text-[15px] tracking-[0.23em] text-center block text-brand focus:outline-none focus:bg-[#fff5f5] focus:shadow-[0_0_10px_rgba(255,95,95,0.3)]"
           />
+          <p v-if="errors.register.email" class="text-[10px] text-red-200 text-left">
+            {{ errors.register.email }}
+          </p>
 
           <div class="mt-3 text-[10px] text-right">
             <a href="#" class="text-white no-underline">FORGOT PASSWORD?</a>
@@ -126,16 +145,53 @@ const registerForm = reactive({
   email: '',
 })
 
+const errors = reactive({
+  login: {
+    username: '',
+    password: '',
+  },
+  register: {
+    username: '',
+    password: '',
+    email: '',
+  },
+})
+
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+
 const setTab = (tab) => {
   activeTab.value = tab
 }
 
+const validateLogin = () => {
+  errors.login.username = loginForm.username ? '' : 'Username is required'
+  errors.login.password =
+    loginForm.password.length >= 4 ? '' : 'Password must be at least 4 characters'
+  return !errors.login.username && !errors.login.password
+}
+
+const validateRegister = () => {
+  errors.register.username = registerForm.username ? '' : 'Username is required'
+  errors.register.password =
+    registerForm.password.length >= 4 ? '' : 'Password must be at least 4 characters'
+  errors.register.email = isValidEmail(registerForm.email) ? '' : 'Invalid email format'
+  return (
+    !errors.register.username &&
+    !errors.register.password &&
+    !errors.register.email
+  )
+}
+
 const onLogin = () => {
-  console.log('Login:', loginForm)
+  if (validateLogin()) {
+    console.log('Login:', loginForm)
+  }
 }
 
 const onRegister = () => {
-  console.log('Register:', registerForm)
+  if (validateRegister()) {
+    console.log('Register:', registerForm)
+  }
 }
 </script>
 
