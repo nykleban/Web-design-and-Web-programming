@@ -36,7 +36,7 @@
           </button>
         </div>
 
-        <!-- LOGIN FORM -->
+
         <form v-if="activeTab === 'login'" class="space-y-2.5" @submit.prevent="onLogin">
           <input
             v-model="loginForm.username"
@@ -75,7 +75,6 @@
           </p>
         </form>
 
-        <!-- REGISTER FORM -->
         <form v-else class="space-y-2.5" @submit.prevent="onRegister">
           <input
             v-model="registerForm.username"

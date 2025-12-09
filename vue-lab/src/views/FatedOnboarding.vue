@@ -12,7 +12,6 @@
         />
       </div>
 
-      <!-- Текстова частина -->
       <div class="w-full flex flex-col items-center">
         <div
           class="bg-brand text-white flex items-center justify-center rounded text-[12px] font-bold text-center mt-[70px] mx-auto px-4 py-3 tracking-[0.05em]"
@@ -28,7 +27,7 @@
         </p>
       </div>
 
-      <!-- Навігація -->
+
       <div class="w-full flex items-center justify-between mb-4">
         <button
           type="button"
@@ -65,7 +64,6 @@
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-// Заміни шляхи до зображень так, як у тебе організовані assets
 import img1 from '@/assets/img1.jpg'
 import img2 from '@/assets/img2.jpg'
 import img3 from '@/assets/img3.jpg'
